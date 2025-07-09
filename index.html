@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. The Floor: EuroSongs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1e1e2f;
+      color: #f0f0f5;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+   
+    h2 {
+      text-align: center;
+      color: #e0b700;
+    }
+
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 3em;
+    }
+
+    details {
+      margin: 12px 0;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px;
+      background: #2b2b40;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s;
+    }
+
+    details:hover {
+      background: #35354d;
+    }
+
+    summary {
+      font-weight: 600;
+      font-size: 1.05em;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    .first-box {
+      margin-top: 20px;
+      padding: 16px;
+      background: #2a2a38;
+      border-radius: 8px;
+      text-align: center;
+      color: #ffffff;
+    
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .summary-box {
+      margin-top: 50px;
+      padding: 24px;
+      background: #2a2a3d;
+      border-left: 5px solid #e0b700;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+      border: 1px solid #444;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+    }
+
+      .pojedynek {
+    border: 1px solid #1b1b1b;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #2a2a38;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .pojedynek-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+
+  .zwyciezca {
+    color: rgb(255, 225, 55);
+    font-weight: bold;
+  }
+
+  .przegrany {
+    color: #aaa;
+  }
+
+    .statystyki {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .statystyki h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: rgb(255, 227, 143);
+  }
+
+  .statystyki ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .statystyki li {
+    padding: 2px 0;
+  }
+
+  .bilans {
+    margin-top: 20px;
+  }
+
+  .bilans .win {
+    color: rgb(164, 248, 84);
+    font-weight: bold;
+  }
+
+  .bilans .loss {
+    color: #ff5a5a;
+  }
+
+  .bilans {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrowanie poziome */
+}
+
+.bilans-entry {
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 12px; /* mniejszy odstęp między nazwą a bilansem */
+  padding: 2px 8px;
+  font-size: 1em;
+  border-bottom: 1px  #eee;
+  width: fit-content;
+  min-width: 160px;
+}
+  </style>
+</head>
+
+<body>
+  <h1>1. The Floor: EuroSongs</h1>
+
+  <div class="first-box">
+    <h2>Zwycięzca: Karol S.</h2>
+    <p><b>Termin: 08.07.2025 20:45 - 22:20</b></p>
+  </div>
+
+  <section>
+    <br>
+    <details>
+      <summary>UCZESTNICY</summary>
+      <table style="width:100%; margin-top: 10px; border-collapse: collapse; color: #f0f0f5;">
+        <thead>
+          <tr style="background-color: #e0b700; color: #1e1e2f;">
+            <th style="padding: 10px; text-align: left;">Uczestnik</th>
+            <th style="padding: 10px; text-align: left;">Kategoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Karol S.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">kluby piłkarskie</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Jacek K.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">pierwiastki chemiczne</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Paweł K.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">pokemony</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Marcel P.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">skoczkowie narciarscy</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Jan F.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">gry komputerowe</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Michał B.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">stolice</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Michał N.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">piłkarze</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Jakub S.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">flagi</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Adrian Z.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">albumy muzyczne</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Wiktor Z.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">matematyka</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Radek S.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">owoce</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Dawid W.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">ryby</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Hubert K.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">rasy kotów</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">Piotr S.</td>
+            <td style="padding: 8px; border-bottom: 1px solid #444;">polskie miasta</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px;">Mateusz Z.</td>
+            <td style="padding: 8px;">eurowizja</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px;">Wojciech M.</td>
+            <td style="padding: 8px;">języki świata</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+
+    <details>
+      <summary>PLANSZA</summary>
+      <img src="plansza.png" alt="Plansza teleturnieju">
+    </details>
+    <br>
+    <section>
+  <h2>POJEDYNKI</h2>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#1 MATEMATYKA</div>
+    <p><span class="przegrany">Michał B.</span> vs <span class="zwyciezca">Wiktor Z.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#2 RYBY</div>
+    <p><span class="przegrany">Dawid W.</span> vs <span class="zwyciezca">Wiktor Z.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#3 OWOCE</div>
+    <p><span class="zwyciezca">Radek S.</span> vs <span class="przegrany">Wiktor Z.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#4 FLAGI</div>
+    <p><span class="przegrany">Radek S.</span> vs <span class="zwyciezca">Jakub S.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#5 ALBUMY MUZYCZNE</div>
+    <p><span class="przegrany">Paweł K.</span> vs <span class="zwyciezca">Adrian Z.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#6 EUROWIZJA</div>
+    <p><span class="zwyciezca">Mateusz Z.</span> vs <span class="przegrany">Adrian Z.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#7 STOLICE</div>
+    <p><span class="przegrany">Mateusz Z.</span> vs <span class="zwyciezca">Jakub S.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#8 PIERWIASTKI CHEMICZNE</div>
+    <p><span class="przegrany">Jacek K.</span> vs <span class="zwyciezca">Jakub S.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#9 POLSKIE MIASTA</div>
+    <p><span class="przegrany">Piotr S.</span> vs <span class="zwyciezca">Marcel P.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#10 POKEMONY</div>
+    <p><span class="zwyciezca">Wojciech M.</span> vs <span class="przegrany">Jakub S.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#11 JĘZYKI ŚWIATA</div>
+    <p><span class="zwyciezca">Wojciech M.</span> vs <span class="przegrany">Michał N.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#12 KLUBY PIŁKARSKIE</div>
+    <p><span class="przegrany">Wojciech M.</span> vs <span class="zwyciezca">Karol S.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#13 PIŁKARZE</div>
+    <p><span class="zwyciezca">Karol S.</span> vs <span class="przegrany">Jan F.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#14 GRY KOMPUTEROWE</div>
+    <p><span class="przegrany">Hubert K.</span> vs <span class="zwyciezca">Karol S.</span></p>
+  </div>
+
+  <div class="pojedynek">
+    <div class="pojedynek-title">#15 SKOCZKOWIE NARCIARSCY</div>
+    <p><span class="zwyciezca">Karol S.</span> vs <span class="przegrany">Marcel P.</span></p>
+  </div>
+</section>
+
+  </section>
+
+  <div class="statystyki">
+    <br>
+  <h2>Podsumowanie</h2>
+  <ul>
+    <li>Liczba pojedynków: <span class="highlight">15</span></li>
+    <li>Najwięcej zwycięstw: <span class="highlight">Karol S. (4)</span></li>
+    <li>Najwyższe zwycięstwo: <span class="highlight">RYBY</span> – <b>Wiktor Z. pozostało</b> <span class="highlight">1:25</span></li>
+    <li>Najbardziej wyrównany pojedynek: <span class="highlight">STOLICE</span> – <b>Jakub S. pozostało</b> <span class="highlight"> 0:01</span></li>
+    <li>Kategoria niewykorzystana: <span class="highlight">rasy kotów</span></li>
+  </ul>
+
+  <div class="bilans">
+    <br>
+    <h2>Bilans uczestników</h2>
+    <div class="bilans-entry"><span>Karol S.</span><span class="win">4:0</span></div>
+    <div class="bilans-entry"><span>Jakub S.</span><span class="win">3:1</span></div>
+    <div class="bilans-entry"><span>Wojciech M.</span><span class="win">2:1</span></div>
+    <div class="bilans-entry"><span>Wiktor Z.</span><span class="win">2:1</span></div>
+    <div class="bilans-entry"><span>Mateusz Z.</span><span class="draw">1:1</span></div>
+    <div class="bilans-entry"><span>Adrian Z.</span><span class="draw">1:1</span></div>
+    <div class="bilans-entry"><span>Radek S.</span><span class="draw">1:1</span></div>
+    <div class="bilans-entry"><span>Marcel P.</span><span class="draw">1:1</span></div>
+    <div class="bilans-entry"><span>Jan F.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Michał B.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Michał N.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Paweł K.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Jacek K.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Dawid W.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Hubert K.</span><span class="loss">0:1</span></div>
+    <div class="bilans-entry"><span>Piotr S.</span><span class="loss">0:1</span></div>
+  </div>
+</div>
+</body>
+
+</html>
