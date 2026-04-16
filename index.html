@@ -178,17 +178,17 @@
 
 <body>
  <body>
-  <h1>The Floor – Podsumowanie 7 edycji</h1>
+  <h1>The Floor – Podsumowanie</h1>
 
   <div class="first-box">
     <h2>Zwycięzcy edycji</h2>
-    <p><b>1.</b> Karol S.</p>
-    <p><b>2.</b> Radek S.</p>
-    <p><b>3.</b> Jan F.</p>
-    <p><b>4.</b> Michał B.</p>
-    <p><b>5.</b> Michał B.</p>
-    <p><b>6.</b> Michał B.</p>
-    <p><b>7.</b> Paweł K.</p>
+    <p><b>1. Floor:</b> Karol S.</p>
+    <p><b>2. Floor:</b> Radek S.</p>
+    <p><b>3. Floor:</b> Jan F.</p>
+    <p><b>4. Floor:</b> Michał B.</p>
+    <p><b>5. Floor:</b> Michał B.</p>
+    <p><b>6. Floor:</b> Michał B.</p>
+    <p><b>7. Floor:</b> Paweł K.</p>
   </div>
 
   <div class="statystyki">
@@ -238,13 +238,165 @@
     <p><b>Najlepszy bilans:</b> Paweł K. (+8)</p>
   </div>
 
-  <section>
-    <h2>Plansze edycji</h2>
-    <details>
-      <summary>Pokaż plansze (1–7 edycja)</summary>
-      <img src="plansza.png" alt="Plansze">
-    </details>
-  </section>
+   <section>
+  <h2>Edycje i pojedynki</h2>
+  <div id="edycje"></div>
+</section>
+
+<script>
+const edycje = [
+
+{
+nr: 1,
+pojedynki: [
+["Wiktor Z.","Michał B.","matematyka"],
+["Wiktor Z.","Dawid W.","ryby"],
+["Radek S.","Wiktor Z.","owoce"],
+["Jakub S.","Radek S.","flagi"],
+["Adrian Z.","Paweł K.","albumy muzyczne"],
+["Mateusz Z.","Adrian Z.","eurowizja"],
+["Jakub S.","Mateusz Z.","stolice"],
+["Jakub S.","Jacek K.","pierwiastki chemiczne"],
+["Marcel P.","Piotr S.","polskie miasta"],
+["Wojciech M.","Jakub S.","pokemony"],
+["Wojciech M.","Michał N.","języki świata"],
+["Karol S.","Wojciech M.","kluby piłkarskie"],
+["Karol S.","Jan F.","piłkarze"],
+["Karol S.","Hubert K.","gry komputerowe"],
+["Karol S.","Marcel P.","skoczkowie narciarscy"]
+]
+},
+
+{
+nr: 2,
+pojedynki: [
+["Piotr S.","Marcel P.","rebusy"],
+["Michał K.","Piotr S.","władcy polski"],
+["Paweł K.","Michał K.","organizm człowieka"],
+["Paweł K.","Jan F.","ortografia"],
+["Radek S.","Paweł K.","rasy psów"],
+["Radek S.","Michał B.","tenisistki"],
+["Radek S.","Karol S.","zwycięzcy eurosongs"],
+["Wojciech M.","Hubert K.","drag queens"],
+["Wojciech M.","Dawid W.","stany usa"],
+["Radek S.","Wojciech M.","polscy siatkarze"]
+]
+},
+
+{
+nr: 3,
+pojedynki: [
+["Hubert K.","Piotr S.","dzikie zwierzęta polski"],
+["Wiktor Z.","Paweł K.","polskie piosenkarki"],
+["Wiktor Z.","Hubert K.","harry potter"],
+["Wiktor Z.","Radek S.","marki produktów"],
+["Wiktor Z.","Michał K.","lektury szkolne"],
+["Adrian Z.","Wiktor Z.","teledyski"],
+["Marcel P.","Mateusz Z.","kompoty"],
+["Dawid W.","Bartek M.","kosmos"],
+["Jan F.","Karol S.","polscy youtuberzy"],
+["Marcel P.","Dawid W.","managerowie eurosongs"],
+["Adrian Z.","Marcel P.","kierowcy f1"],
+["Jan F.","Adrian Z.","choroby"]
+]
+},
+
+{
+nr: 4,
+pojedynki: [
+["Hubert K.","Adrian Z.","przebrania halloween"],
+["Hubert K.","Jacek K.","miejsca na sex"],
+["Paweł K.","Bartek M.","drzewa"],
+["Paweł K.","Michał K.","przyprawy"],
+["Paweł K.","Mateusz Z.","kolory"],
+["Jakub S.","Marcel P.","postacie z disneya"],
+["Jan F.","Hubert K.","teksty piosenek"],
+["Karol S.","Jan F.","piłkarze realu madryt"],
+["Michał B.","Paweł K.","kamienie szlachetne"],
+["Michał B.","Jakub S.","godła państw"],
+["Michał B.","Karol S.","filmy oscarowe"]
+]
+},
+
+{
+nr: 5,
+pojedynki: [
+["Bartek M.","Jan F.","postacie z gry heroes"],
+["Adrian Z.","Bartek M.","piosenki 2000-2010"],
+["Adrian Z.","Wiktor Z.","taniec z gwiazdami"],
+["Paweł K.","Michał N.","prezenty na komunie"],
+["Paweł K.","Adrian Z.","ikony programów"],
+["Michał B.","Jakub S.","konkurencje olimpijskie"],
+["Michał B.","Karol S.","terytoria zależne"],
+["Paweł K.","Hubert K.","przysłowia"],
+["Paweł K.","Piotr S.","zwierzęta w zoo"],
+["Michał B.","Paweł K.","gangi biedronki"]
+]
+},
+
+{
+nr: 6,
+pojedynki: [
+["Marcel P.","Karol S.","kluby angielskie"],
+["Michał B.","Paweł K.","dzieła sztuki"],
+["Paweł K.","Bartek M.","warzywa"],
+["Paweł K.","Jacek K.","rośliny domowe"],
+["Bartek K.","Jan F.","polscy patocelebryci"],
+["Bartek K.","Michał K.","reprezentanci esc"],
+["Michał B.","Marcel P.","polscy politycy"],
+["Bartek K.","Adrian Z.","artykuły biurowe"],
+["Michał B.","Jakub S.","identyfikatory państw"],
+["Jakub S.","Bartek K.","lekarze"]
+]
+},
+
+{
+nr: 7,
+pojedynki: [
+["Jacek K.","Piotr S.","K****!"],
+["Bartek M.","Jacek K.","rodzaje kur"],
+["Bartek M.","Magda N.","państwa-miasta"],
+["Bartek K.","Jan F.","śpiewające oczy"],
+["Bartek K.","Michał N.","seriale"],
+["Karol S.","Bartek K.","legendy sportu"],
+["Paweł K.","Bartek M.","insekty"],
+["Michał K.","Marcel P.","teleturnieje"],
+["Michał K.","Michał B.","korporacje"],
+["Paweł K.","Michał K.","kwiaty"],
+["Paweł K.","Karol S.","billie eilish"]
+]
+}
+
+];
+
+const container = document.getElementById("edycje");
+
+edycje.forEach(ed => {
+  const details = document.createElement("details");
+
+  const summary = document.createElement("summary");
+  summary.textContent = `Edycja ${ed.nr}`;
+  details.appendChild(summary);
+
+  ed.pojedynki.forEach((p, i) => {
+    const div = document.createElement("div");
+    div.className = "pojedynek";
+
+    div.innerHTML = `
+      <div class="pojedynek-title">#${i+1} – ${p[2]}</div>
+      <span class="zwyciezca">${p[0]}</span> 
+      vs 
+      <span class="przegrany">${p[1]}</span>
+    `;
+
+    details.appendChild(div);
+  });
+
+  container.appendChild(details);
+});
+</script>
+
+
 
 
 </body>
